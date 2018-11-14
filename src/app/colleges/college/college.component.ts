@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {NgForm} from '@angular/forms';
 
 import { CollegeService } from '../shared/college.service';
+//import {ToastrService} from 'ngx-toastr';
 
 @Component({
   selector: 'app-college',
@@ -10,16 +11,17 @@ import { CollegeService } from '../shared/college.service';
 })
 export class CollegeComponent implements OnInit {
 
-  constructor(private collegeservice : CollegeService  ) { }
+  constructor(private collegeservice : CollegeService ) { }
 
   ngOnInit() {
-    this.collegeservice.getData();
+   
     this.resetForm();
   }
 
   onSubmit(collegeForm : NgForm){
    this.collegeservice.insertCollege(collegeForm.value);
    this.resetForm(collegeForm);
+   //this.tostr.success('Summited Successfully','College List');
   }
 
   resetForm(collegeForm? : NgForm){

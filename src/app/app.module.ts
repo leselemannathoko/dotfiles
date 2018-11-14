@@ -11,7 +11,7 @@ import { CollegeComponent } from './colleges/college/college.component';
 import { CollegeListComponent } from './colleges/college-list/college-list.component';
 
 import { AngularFireModule } from '@angular/fire';
-//import { CollegeListComponent } from './colleges/college-list/college-list.component';
+//import { ToasterModule } from 'ngx-toaster';
 //import { CollegeComponent } from './colleges/college/college.component';
 
 @NgModule({
@@ -26,6 +26,7 @@ import { AngularFireModule } from '@angular/fire';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     FormsModule
+    //ToasterModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
